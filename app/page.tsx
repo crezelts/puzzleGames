@@ -1,101 +1,90 @@
-import Image from "next/image";
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPuzzlePiece, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import Link from "next/link"
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    <>
+      <header>
+        <link rel="icon" href="/mainLogo2.png" />
+        <title>PuzzleGame</title>
+      </header>
+      <div className="flex flex-col min-h-screen">
+        <header className="px-4 lg:px-6 h-14 flex items-center">
+          <Link className="flex items-center justify-center" href="#">
+            <FontAwesomeIcon icon={faPuzzlePiece} className="h-6 w-6" />
+            <span className="ml-2 text-lg font-bold">Puzzle Game</span>
+          </Link>
+          <nav className="ml-auto flex gap-4 sm:gap-6 justify-center">
+            <Link className="text-medium font-medium hover:underline underline-offset-4" href="/">
+              Home
+            </Link>
+            <Link className="flex text-medium font-medium hover:underline underline-offset-4" href="/download">
+              download
+            </Link>
+          </nav>
+        </header>
+        <main className="flex-1">
+          <div>
+            <ul className='flex justify-center relative top-40 z-10 text-white'>
+              <div className='space-y-5'>
+                <li className='font-bold text-4xl'><span>Welcome to PuzzleGame</span></li>
+                <li><span className='text-lg'>Challenge your mind with captivating puzzles that will keep you hooked for hours!</span></li>
+                <Link href='/download' className='flex relative top-12 font-bold text-xl'>
+                  Try PuzzleGame
+                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='h-5 w-5 mt-1 ml-2' />
+                </Link>
+              </div>
+            </ul>
+            <img src='/game.jpg' className='w-full h-[600px] object-cover -mt-32' />
+          </div>
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 flex justify-center">
+            <div className="container px-4 md:px-6">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 relative -top-5">Puzzle Game Tutorial</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  { description: "1. Click the puzzlGame Folder", imagePath: '/GameTutorial1.png' },
+                  { description: "2. Click the runFile(puzzleGame) Folder", imagePath: '/GameTutorial2.png' },
+                  { description: "3. Click the game Folder", imagePath: '/GameTutorial3.png' },
+                  { description: "4. open the gmae file", imagePath: '/GameTutorial4.png' },
+                  { description: "5. Click the Start button", imagePath: '/puzzleGamePhoto1.png' },
+                  { description: "6. Play the Game!!", imagePath: '/puzzleGamePhoto2.png' },
+                ].map((game, index) => (
+                  <div key={index}>
+                    <div>
+                      <div className='relative -top-3'>{game.description}</div>
+                    </div>
+                    <div>
+                      <div className="aspect-[16/9] relative bg-gray-200 rounded-md overflow-hidden">
+                        <img
+                          src={game.imagePath}
+                          alt="이미지 파일"
+                          className="object-cover"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+          <p className="text-xs text-gray-500">© 2024 PuzzleGame. All rights reserved.</p>
+          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+            <Link className="flex text-xs hover:underline underline-offset-4" href="#">
+              <FontAwesomeIcon icon={faGithub} className='h-4 w-6 text-black' />
+              Github
+            </Link>
+            <Link className="text-xs hover:underline underline-offset-4" href="#">
+              Original code
+            </Link>
+          </nav>
+        </footer>
+      </div>
+    </>
+  )
 }
