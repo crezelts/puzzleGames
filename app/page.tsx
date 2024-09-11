@@ -50,7 +50,7 @@ export default function Home() {
                   { description: "1. Click the puzzlGame Folder", imagePath: '/GameTutorial1.png' },
                   { description: "2. Click the runFile(puzzleGame) Folder", imagePath: '/GameTutorial2.png' },
                   { description: "3. Click the game Folder", imagePath: '/GameTutorial3.png' },
-                  { description: "4. open the gmae file", imagePath: '/GameTutorial4.png' },
+                  { description: "4. open the game file", imagePath: '/GameTutorial4.png' },
                   { description: "5. Click the Start button", imagePath: '/puzzleGamePhoto1.png' },
                   { description: "6. Play the Game!!", imagePath: '/puzzleGamePhoto2.png' },
                 ].map((game, index) => (
