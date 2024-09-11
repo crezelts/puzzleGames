@@ -19,10 +19,10 @@ export default function Home() {
             <span className="ml-2 mt-1 text-lg font-bold">Puzzle Game</span>
           </Link>
           <nav className="ml-auto flex gap-4 sm:gap-6 justify-center">
-            <Link className="text-medium font-medium hover:underline underline-offset-4" href="/">
+            <Link className="text-medium font-medium hover:underline underline-offset-4 mt-1" href="/">
               Home
             </Link>
-            <Link className="flex text-medium font-medium hover:underline underline-offset-4" href="/download">
+            <Link className="flex text-medium font-medium hover:underline underline-offset-4 mt-1" href="/download">
               download
             </Link>
           </nav>
@@ -43,7 +43,7 @@ export default function Home() {
           </div>
           <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 flex justify-center">
             <div className="container px-4 md:px-6">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 relative -top-5">Puzzle Game Tutorial</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 relative -top-5 text-black">Puzzle Game Tutorial</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
                   { description: "1. Click the puzzlGame Folder", imagePath: '/GameTutorial1.png' },
@@ -75,12 +75,12 @@ export default function Home() {
         <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
           <p className="text-xs text-white">© 2024 PuzzleGame. All rights reserved.</p>
           <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link className="flex text-xs hover:underline underline-offset-4" href="#">
-              <FontAwesomeIcon icon={faGithub} className='h-4 w-6 text-black' />
-              Github
+            <Link className="flex text-sm hover:underline underline-offset-4" href="#">
+              <FontAwesomeIcon icon={faGithub} className='h-6 w-6 text-white -mt-1 mr-1' />
+              <span className='-mt-0.5'>Github</span>
             </Link>
             <Link className="text-xs hover:underline underline-offset-4" href="#">
-              Original code
+            <span className='relative -top-0.5 text-sm'>Original code</span>
             </Link>
           </nav>
         </footer>
