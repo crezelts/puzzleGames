@@ -29,10 +29,10 @@ export default function Home() {
         </header>
         <main className="flex-1">
           <div>
-            <ul className='flex justify-center relative top-40 z-10 text-white'>
+            <ul className='flex justify-center relative top-40 z-10 text-white px-4 md:px-6'>
               <div className='space-y-5'>
-                <li className='font-bold text-4xl'><span>Welcome to PuzzleGame</span></li>
-                <li><span className='text-lg'>Challenge your mind with captivating puzzles that will keep you hooked for hours!</span></li>
+                <li className='font-bold text-4xl mb-4'><span>Welcome to PuzzleGame</span></li>
+                <li className='text-lg mb-4'><span>Challenge your mind with captivating puzzles that will keep you hooked for hours!</span></li>
                 <Link href='/download' className='flex relative top-12 font-bold text-xl'>
                   Try PuzzleGame
                   <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='h-5 w-5 mt-1 ml-2' />
@@ -53,7 +53,7 @@ export default function Home() {
                   { description: "5. Click the Start button", imagePath: '/puzzleGamePhoto1.png' },
                   { description: "6. Play the Game!!", imagePath: '/puzzleGamePhoto2.png' },
                 ].map((game, index) => (
-                  <div key={index}>
+                  <div key={index} className='text-black'>
                     <div>
                       <div className='relative -top-3'>{game.description}</div>
                     </div>
@@ -80,7 +80,7 @@ export default function Home() {
               <span className='-mt-0.5'>Github</span>
             </Link>
             <Link className="text-xs hover:underline underline-offset-4" href="#">
-            <span className='relative -top-0.5 text-sm'>Original code</span>
+              <span className='relative -top-0.5 text-sm'>Original code</span>
             </Link>
           </nav>
         </footer>
