@@ -23,7 +23,7 @@ export default function Home() {
             <Link className="text-medium font-medium hover:underline underline-offset-4 mt-1" href="/">
               Home
             </Link>
-            <Link className="flex text-medium font-medium hover:underline underline-offset-4 mt-1" href="/download">
+            <Link className="flex text-medium font-medium hover:underline underline-offset-4 mt-1" href="/download" target="_blank">
               download
             </Link>
           </nav>
