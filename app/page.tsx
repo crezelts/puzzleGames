@@ -75,11 +75,11 @@ export default function Home() {
         <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
           <p className="text-xs text-white">© 2024 PuzzleGame. All rights reserved.</p>
           <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link className="flex text-sm hover:underline underline-offset-4" href="#">
+            <Link href='https://github.com/crezelts/puzzleGames' className="flex text-sm hover:underline underline-offset-4">
               <FontAwesomeIcon icon={faGithub} className='h-6 w-6 text-white -mt-1 mr-1' />
               <span className='-mt-0.5'>Github</span>
             </Link>
-            <Link className="text-xs hover:underline underline-offset-4" href="#">
+            <Link href='https://copyassignment.com/puzzle-game-in-python/' className="text-xs hover:underline underline-offset-4">
               <span className='relative -top-0.5 text-sm'>Original code</span>
             </Link>
           </nav>
