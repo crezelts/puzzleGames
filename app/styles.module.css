@@ -1,0 +1,8 @@
+.hidden_part {
+    display: block;
+}
+@media (max-width: 375px) {
+    .hidden_part {
+        display: none;
+    }
+}

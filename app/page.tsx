@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPuzzlePiece, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import styles from './styles.module.css'
 import Link from "next/link"
 
 
@@ -16,7 +17,7 @@ export default function Home() {
         <header className="px-4 lg:px-6 h-14 flex items-center">
           <Link className="flex items-center justify-center" href="#">
             <FontAwesomeIcon icon={faPuzzlePiece} className="h-6 w-6" />
-            <span className="ml-2 mt-1 text-lg font-bold">Puzzle Game</span>
+            <span className={`hidden_part ml-2 mt-1 text-lg font-bold ${styles.hidden_part}`}>Puzzle Game</span>
           </Link>
           <nav className="ml-auto flex gap-4 sm:gap-6 justify-center">
             <Link className="text-medium font-medium hover:underline underline-offset-4 mt-1" href="/">
