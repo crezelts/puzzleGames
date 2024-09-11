@@ -16,7 +16,7 @@ export default function Home() {
         <header className="px-4 lg:px-6 h-14 flex items-center">
           <Link className="flex items-center justify-center" href="#">
             <FontAwesomeIcon icon={faPuzzlePiece} className="h-6 w-6" />
-            <span className="ml-2 text-lg font-bold">Puzzle Game</span>
+            <span className="ml-2 mt-1 text-lg font-bold">Puzzle Game</span>
           </Link>
           <nav className="ml-auto flex gap-4 sm:gap-6 justify-center">
             <Link className="text-medium font-medium hover:underline underline-offset-4" href="/">
@@ -73,7 +73,7 @@ export default function Home() {
           </section>
         </main>
         <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-          <p className="text-xs text-gray-500">© 2024 PuzzleGame. All rights reserved.</p>
+          <p className="text-xs text-white">© 2024 PuzzleGame. All rights reserved.</p>
           <nav className="sm:ml-auto flex gap-4 sm:gap-6">
             <Link className="flex text-xs hover:underline underline-offset-4" href="#">
               <FontAwesomeIcon icon={faGithub} className='h-4 w-6 text-black' />
